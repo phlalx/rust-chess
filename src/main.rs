@@ -4,6 +4,7 @@ use std::io::Write;
 mod position;
 mod color;
 mod piece;
+mod board;
 
 fn evaluate_command(command: &String) {
     let mut tokens = command.split_ascii_whitespace();

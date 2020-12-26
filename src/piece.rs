@@ -24,7 +24,7 @@ fn to_char(piece: PieceKind) -> char {
     }
 }
 
-struct Piece {
+pub struct Piece {
     pos: crate::position::Position,
     color: crate::color::Color,
     kind: PieceKind,
