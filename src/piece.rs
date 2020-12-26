@@ -1,3 +1,5 @@
+use crate::position;
+use crate::color;
 
 enum PieceKind { Pawn, Knight, Bishop, Rook, Queen, King }
 
@@ -25,8 +27,8 @@ fn to_char(piece: PieceKind) -> char {
 }
 
 pub struct Piece {
-    pos: crate::position::Position,
-    color: crate::color::Color,
+    pos: position::Position,
+    color: color::Color,
     kind: PieceKind,
     is_captured: bool,
 }
