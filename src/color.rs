@@ -1,2 +1,2 @@
 
-enum Color { Black, White }
+pub enum Color { Black, White }

@@ -1,8 +1,9 @@
 use std::io;
 use std::io::Write;
 
-mod position; // TODO keeping this for position to compile
+mod position;
 mod color;
+mod piece;
 
 fn evaluate_command(command: &String) {
     let mut tokens = command.split_ascii_whitespace();
