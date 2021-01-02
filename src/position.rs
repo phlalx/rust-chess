@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 pub struct Position(pub u8, pub u8);
 
@@ -38,10 +37,9 @@ impl Position {
         let mut res = String::new();
         res.push(self.get_file_letter());
         res.push(self.get_rank_letter());
-        return res
+        return res;
     }
 }
-
 
 #[cfg(test)]
 mod tests {

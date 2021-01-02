@@ -1,11 +1,12 @@
+#![allow(dead_code)]
 use std::io;
 use std::io::Write;
 
-mod position;
-mod color;
-mod piece;
 mod board;
+mod color;
 mod r#move;
+mod piece;
+mod position;
 
 fn evaluate_command(command: &String) {
     let mut tokens = command.split_ascii_whitespace();
@@ -15,7 +16,7 @@ fn evaluate_command(command: &String) {
         "quit" => {
             println!("Bye!");
             std::process::exit(0);
-        },
+        }
         _ => (),
     }
 }
@@ -25,7 +26,9 @@ fn main() {
     loop {
         print!("> ");
         io::stdout().flush().expect("Failed flushing stdout");
-        io::stdin().read_line(&mut command).expect("Failed to read command");
+        io::stdin()
+            .read_line(&mut command)
+            .expect("Failed to read command");
         evaluate_command(&command);
     }
 }

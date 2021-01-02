@@ -1,7 +1,14 @@
-use crate::position;
 use crate::color;
+use crate::position;
 
-enum PieceKind { Pawn, Knight, Bishop, Rook, Queen, King }
+pub enum PieceKind {
+    Pawn,
+    Knight,
+    Bishop,
+    Rook,
+    Queen,
+    King,
+}
 
 fn cost(piece: PieceKind) -> u32 {
     match piece {
@@ -33,3 +40,13 @@ pub struct Piece {
     is_captured: bool,
 }
 
+impl Piece {
+    pub fn new(pos: position::Position, color: color::Color, kind: PieceKind) -> Self {
+        Piece {
+            pos: pos,
+            color: color,
+            kind: kind,
+            is_captured: false,
+        }
+    }
+}
